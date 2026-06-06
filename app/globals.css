@@ -20,12 +20,18 @@
 
   body {
     @apply bg-ink text-fog font-mono antialiased;
-    /* faint radial vignette so the near-black has depth */
+    /* layered radial glows give the near-black a futuristic, dimensional feel */
     background-image: radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgba(57, 255, 20, 0.05),
-      transparent 70%
-    );
+        ellipse 70% 50% at 15% 0%,
+        rgba(57, 255, 20, 0.07),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 50% at 85% 100%,
+        rgba(200, 16, 46, 0.06),
+        transparent 60%
+      );
+    background-attachment: fixed;
   }
 
   /* Uniform, theme-matched keyboard focus ring across all interactive elements */
@@ -53,27 +59,18 @@
     text-shadow: 0 0 10px rgba(200, 16, 46, 0.55);
   }
 
-  /* Binary/matrix texture — pure CSS, no per-frame JS. Two tiled gradient
-     layers fake falling code columns; opacity kept low so it reads as texture. */
+  /* Soft futuristic dot-grid texture — pure CSS, no per-frame JS. Reads as a
+     faint sci-fi blueprint rather than falling terminal code. */
   .matrix-bg {
     background-color: theme("colors.ink");
-    background-image: repeating-linear-gradient(
-        90deg,
-        rgba(57, 255, 20, 0.05) 0px,
-        rgba(57, 255, 20, 0.05) 1px,
-        transparent 1px,
-        transparent 22px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        rgba(57, 255, 20, 0.04) 0px,
-        rgba(57, 255, 20, 0.04) 1px,
-        transparent 1px,
-        transparent 22px
-      );
+    background-image: radial-gradient(
+      rgba(57, 255, 20, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 26px 26px;
   }
 
-  /* Subtle CRT scanline overlay — apply to a pointer-events-none layer */
+  /* Very subtle scanline sheen — kept faint so panels read as glass, not CRT */
   .scanlines::after {
     content: "";
     position: absolute;
@@ -81,10 +78,10 @@
     pointer-events: none;
     background: repeating-linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.18) 0px,
-      rgba(0, 0, 0, 0.18) 1px,
+      rgba(0, 0, 0, 0.08) 0px,
+      rgba(0, 0, 0, 0.08) 1px,
       transparent 1px,
-      transparent 3px
+      transparent 4px
     );
     mix-blend-mode: multiply;
   }
