@@ -1,17 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo_Black, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const display = Archivo_Black({
-  weight: "400",
+const display = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
+const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A0A0A",
+  themeColor: "#F5EFE2",
 };
 
 export default function RootLayout({
@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable}`}>
+    <html lang="en" className={cn(display.variable, sans.variable, "font-sans", "bg-background")}>
       <body>{children}</body>
     </html>
   );
