@@ -33,17 +33,17 @@ export function GateOverlay() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-ink transition-opacity duration-700 ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-background transition-opacity duration-700 ${
         entering ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
       role="dialog"
       aria-modal="true"
       aria-label="Enter Farmhouse"
     >
-      {/* ambient depth */}
+      {/* warm ambient wash */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_60%,_rgba(57,255,20,0.12),_transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_60%_at_50%_55%,_hsl(var(--accent)/0.6),_transparent_70%)]"
       />
 
       <button
@@ -54,11 +54,11 @@ export function GateOverlay() {
       >
         {/* bouncing arrow + prompt */}
         <span className="mb-6 flex flex-col items-center gap-2">
-          <span className="font-display text-lg uppercase tracking-[0.3em] text-terminal text-glow sm:text-xl">
+          <span className="font-display text-2xl font-semibold tracking-tight text-primary sm:text-3xl">
             Click to enter
           </span>
           <svg
-            className="h-9 w-9 animate-bounce text-terminal drop-shadow-[0_0_10px_rgba(57,255,20,0.7)]"
+            className="h-9 w-9 animate-bounce text-primary"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -73,22 +73,22 @@ export function GateOverlay() {
         </span>
 
         {/* the gate */}
-        <span className="relative block w-[min(72vw,min(56vh,460px))] overflow-hidden rounded-2xl ring-1 ring-terminal/30 shadow-[0_0_60px_-12px_rgba(57,255,20,0.45)] transition-transform duration-500 group-hover:scale-[1.03]">
+        <span className="relative block w-[min(72vw,min(54vh,460px))] overflow-hidden rounded-3xl shadow-soft-lg ring-1 ring-border transition-transform duration-500 group-hover:scale-[1.03]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/farmhouse-gate.png"
-            alt="Futuristic red and green Farmhouse gate"
+            alt="A cozy red and green farm gate with a path leading up to it"
             className="block h-auto w-full select-none"
             draggable={false}
           />
-          {/* hover sheen */}
+          {/* hover warmth */}
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-terminal/0 transition-colors duration-300 group-hover:bg-terminal/10"
+            className="pointer-events-none absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5"
           />
         </span>
 
-        <span className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-fog-dim">
+        <span className="mt-6 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
           Farmhouse · Summer 2026
         </span>
       </button>
