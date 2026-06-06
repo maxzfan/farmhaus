@@ -33,7 +33,7 @@ export function Hero() {
             <span className="text-foreground">house</span>
           </h1>
 
-          <p className="mt-4 font-display text-xl italic text-secondary sm:text-2xl">
+          <p className="mt-4 font-mono text-sm uppercase tracking-[0.25em] text-secondary sm:text-base">
             Summer 2026 · Code the Farm
           </p>
 

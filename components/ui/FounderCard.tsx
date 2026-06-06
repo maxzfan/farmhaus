@@ -60,11 +60,12 @@ export function FounderCard({ founder }: { founder: Founder }) {
           {bullets.map((bullet) => (
             <li
               key={bullet}
-              className="flex gap-2 text-xs leading-relaxed text-foreground/90 sm:text-sm"
+              className="flex gap-2.5 text-xs leading-relaxed text-foreground/90 sm:text-sm"
             >
-              <span aria-hidden="true" className="select-none text-secondary">
-                ▹
-              </span>
+              <span
+                aria-hidden="true"
+                className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-[2px] bg-secondary"
+              />
               <span>{bullet}</span>
             </li>
           ))}

@@ -1,19 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-
-const display = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const sans = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Farmhouse — Stanford Hacker House · Summer 2026",
@@ -45,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn(display.variable, sans.variable, "font-sans", "bg-background")}>
+    <html lang="en" className={cn(GeistSans.variable, GeistMono.variable, "font-sans", "bg-background")}>
       <body>{children}</body>
     </html>
   );

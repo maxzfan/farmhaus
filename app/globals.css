@@ -4,8 +4,9 @@
 
 @layer base {
   :root {
-    --font-display: "Fraunces", Georgia, serif;
-    --font-sans: "Inter", system-ui, sans-serif;
+    --font-display: var(--font-geist-sans), system-ui, sans-serif;
+    --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
     /* Dark farmhouse palette: black + barn red + farm/terminal green,
        mapped to shadcn semantic tokens (HSL channels). */
