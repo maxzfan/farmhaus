@@ -8,37 +8,37 @@
     --font-sans: var(--font-geist-sans), system-ui, sans-serif;
     --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-    /* Dark farmhouse palette: black + barn red + farm/terminal green,
-       mapped to shadcn semantic tokens (HSL channels). */
-    --background: 0 0% 5%; /* near black */
-    --foreground: 60 12% 92%; /* warm off-white */
+    /* Clean, minimal dark UI (v0-dashboard style): near-black neutral base,
+       cool gray text, hairline borders, restrained red/green accents. */
+    --background: 0 0% 4%; /* near black */
+    --foreground: 0 0% 96%; /* clean off-white */
 
-    --card: 0 0% 8%;
-    --card-foreground: 60 12% 92%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 60 12% 92%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 351 78% 44%; /* barn red */
-    --primary-foreground: 0 0% 98%;
+    --primary: 351 70% 47%; /* barn red accent */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 110 62% 44%; /* farm / terminal green */
+    --secondary: 130 48% 48%; /* farm green accent */
     --secondary-foreground: 0 0% 6%;
 
-    --muted: 0 0% 13%;
-    --muted-foreground: 60 6% 65%;
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 60%; /* neutral gray, not warm */
 
-    --accent: 110 38% 13%; /* deep green tint */
-    --accent-foreground: 110 60% 70%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 92%;
 
-    --destructive: 351 80% 46%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 351 74% 48%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 351 78% 44%;
+    --border: 0 0% 15%; /* hairline */
+    --input: 0 0% 15%;
+    --ring: 0 0% 45%;
 
-    --radius: 0.875rem;
+    --radius: 0.5rem;
   }
 
   html {
@@ -80,13 +80,13 @@
 }
 
 @layer components {
-  /* Subtle dot grid on the near-black background (faint green). */
+  /* Very faint neutral dot grid on the near-black background. */
   .paper-bg {
     background-color: hsl(var(--background));
     background-image: radial-gradient(
-      hsl(110 62% 44% / 0.07) 1px,
+      hsl(0 0% 100% / 0.025) 1px,
       transparent 1px
     );
-    background-size: 22px 22px;
+    background-size: 26px 26px;
   }
 }

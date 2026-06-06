@@ -14,26 +14,20 @@ export function Hero() {
       id="home"
       className="paper-bg relative flex min-h-screen items-center overflow-hidden px-5 pb-16 pt-28 sm:px-8"
     >
-      {/* soft warm wash behind everything */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-accent/40 via-transparent to-transparent"
-      />
-
       <div className="relative z-10 mx-auto grid w-full max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         {/* left: copy */}
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-secondary">
-            <span className="h-2 w-2 rounded-full bg-secondary" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3.5 py-1.5 text-xs font-medium text-muted-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
             Stanford Hacker House
           </span>
 
-          <h1 className="mt-6 font-display text-6xl font-semibold leading-[0.95] tracking-tight sm:text-7xl">
+          <h1 className="mt-6 font-display text-5xl font-semibold leading-[1] tracking-tight sm:text-6xl">
             <span className="text-primary">Farm</span>
             <span className="text-foreground">house</span>
           </h1>
 
-          <p className="mt-4 font-mono text-sm uppercase tracking-[0.25em] text-secondary sm:text-base">
+          <p className="mt-4 font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground sm:text-sm">
             Summer 2026 · Code the Farm
           </p>
 

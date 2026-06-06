@@ -93,8 +93,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        soft: "0 10px 30px -12px rgba(58, 48, 38, 0.35)",
-        "soft-lg": "0 24px 60px -18px rgba(58, 48, 38, 0.45)",
+        soft: "0 1px 0 0 rgba(255, 255, 255, 0.03) inset, 0 8px 24px -12px rgba(0, 0, 0, 0.6)",
+        "soft-lg": "0 1px 0 0 rgba(255, 255, 255, 0.04) inset, 0 24px 60px -20px rgba(0, 0, 0, 0.75)",
       },
       keyframes: {
         "fade-up": {
