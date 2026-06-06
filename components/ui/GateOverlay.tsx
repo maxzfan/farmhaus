@@ -25,6 +25,8 @@ export function GateOverlay() {
   function enter() {
     if (entering) return;
     setEntering(true);
+    // signal the hero's 3D barn to start its rightward slide-in
+    window.dispatchEvent(new Event("farmhouse:enter"));
     // match the CSS transition duration before fully unmounting
     window.setTimeout(() => setHidden(true), 900);
   }

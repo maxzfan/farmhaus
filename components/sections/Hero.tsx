@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { HeroFarmhouse } from "@/components/ui/HeroFarmhouse";
 
 /**
  * Above-the-fold identity moment. Two-column layout: wordmark, tagline, intro,
- * and CTAs on the left; a cozy 3D red-and-green farmhouse render on the right.
- * The farmhouse is height-constrained (max-h via clamp) so the whole house
- * always fits within the hero viewport, and gently floats.
+ * and CTAs on the left; a real Three.js red-and-green barn on the right. The
+ * barn is angled toward the left and slides rightward into place on mount
+ * (right after the visitor enters through the gate).
  */
 export function Hero() {
   return (
@@ -52,22 +53,9 @@ export function Hero() {
           </div>
         </div>
 
-        {/* right: farmhouse render */}
+        {/* right: real-time 3D farmhouse */}
         <div className="relative animate-fade-up [animation-delay:120ms]">
-          <div className="relative mx-auto flex items-center justify-center">
-            {/* warm glow halo behind the render */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 mx-auto my-auto h-2/3 w-2/3 rounded-full bg-primary/10 blur-3xl"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/farmhouse-hero.png"
-              alt="A cozy red barn farmhouse with a green roof on a grassy patch"
-              className="animate-float relative h-auto max-h-[46vh] w-auto max-w-full select-none object-contain drop-shadow-[0_24px_40px_rgba(58,48,38,0.28)] lg:max-h-[60vh]"
-              draggable={false}
-            />
-          </div>
+          <HeroFarmhouse />
         </div>
       </div>
     </section>
