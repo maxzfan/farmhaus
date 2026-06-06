@@ -1,0 +1,72 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Task",
+      "TodoWrite"
+    ],
+    "deny": [],
+    "defaultMode": "bypassPermissions"
+  },
+  "model": "opus[1m]",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Blow.aiff"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "any-buddy apply --silent"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "last30days@last30days-skill": true,
+    "compound-engineering@compound-engineering-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "compound-engineering-plugin": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/EveryInc/compound-engineering-plugin.git"
+      }
+    },
+    "last30days-skill": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/mvanhorn/last30days-skill.git"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true
+}
