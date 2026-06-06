@@ -20,13 +20,13 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#F5EFE2",
+          background: "#0D0D0D",
           backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(91,123,74,0.18), transparent 70%)",
+            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(47,170,63,0.18), transparent 70%)",
           fontFamily: "serif",
         }}
       >
-        <div style={{ display: "flex", color: "#5B7B4A", fontSize: 30, letterSpacing: "4px", textTransform: "uppercase" }}>
+        <div style={{ display: "flex", color: "#2faa3f", fontSize: 30, letterSpacing: "4px", textTransform: "uppercase" }}>
           Stanford Hacker House
         </div>
         <div
@@ -38,10 +38,10 @@ export default function OpengraphImage() {
             letterSpacing: "-4px",
           }}
         >
-          <span style={{ color: "#C0392B" }}>Farm</span>
-          <span style={{ color: "#3A3026" }}>house</span>
+          <span style={{ color: "#c8102e" }}>Farm</span>
+          <span style={{ color: "#f4f1e6" }}>house</span>
         </div>
-        <div style={{ display: "flex", marginTop: 16, color: "#6b5d4d", fontSize: 38 }}>
+        <div style={{ display: "flex", marginTop: 16, color: "#a8a89c", fontSize: 38 }}>
           Summer 2026 · Code the Farm
         </div>
       </div>

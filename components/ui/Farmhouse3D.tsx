@@ -13,13 +13,13 @@ import { Group, NoToneMapping } from "three";
  *   floats. Colors match the warm farmhouse palette: barn red + farm green.
  */
 
-const BARN_RED = "#a32d22";
-const BARN_RED_DARK = "#85211a";
-const ROOF_GREEN = "#4f6b3a";
-const ROOF_GREEN_DARK = "#3f5630";
+const BARN_RED = "#c8102e"; // vivid barn red
+const BARN_RED_DARK = "#9c0c24";
+const ROOF_GREEN = "#2faa3f"; // vivid farm green
+const ROOF_GREEN_DARK = "#1f8230";
 const CREAM = "#f3ead6";
-const TRIM = "#e8dcc2";
-const DOOR_GREEN = "#425a30";
+const TRIM = "#f4ead2";
+const DOOR_GREEN = "#1f8230";
 
 function Barn() {
   const group = useRef<Group>(null);
@@ -146,7 +146,7 @@ function Barn() {
         {/* grassy base disc */}
         <mesh receiveShadow position={[0, -0.02, 0]}>
           <cylinderGeometry args={[2.9, 2.9, 0.12, 40]} />
-          <meshStandardMaterial color="#6f8c4e" roughness={0.9} />
+          <meshStandardMaterial color="#2faa3f" roughness={0.9} />
         </mesh>
       </group>
     </Float>
@@ -154,7 +154,7 @@ function Barn() {
 }
 
 export function Farmhouse3D() {
-  const env = useMemo(() => "park" as const, []);
+  const env = useMemo(() => "city" as const, []);
   return (
     <Canvas
       shadows
@@ -163,24 +163,24 @@ export function Farmhouse3D() {
       gl={{ antialias: true, alpha: true, toneMapping: NoToneMapping }}
       style={{ background: "transparent" }}
     >
-      <ambientLight intensity={0.85} />
+      <ambientLight intensity={0.9} />
       <directionalLight
         position={[5, 8, 4]}
-        intensity={0.7}
+        intensity={0.9}
         castShadow
         shadow-mapSize={[1024, 1024]}
       />
-      <directionalLight position={[-6, 3, -2]} intensity={0.2} color="#ffd9a0" />
+      <directionalLight position={[-6, 3, -2]} intensity={0.35} color="#ffffff" />
 
       <Barn />
 
       <ContactShadows
         position={[0, -0.55, 0]}
-        opacity={0.35}
+        opacity={0.45}
         scale={9}
         blur={2.6}
         far={4}
-        color="#3a3026"
+        color="#000000"
       />
       <Environment preset={env} />
     </Canvas>
