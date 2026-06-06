@@ -1,0 +1,55 @@
+import type { Metadata, Viewport } from "next";
+import { Archivo_Black, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+
+const display = Archivo_Black({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Farmhouse — Stanford Hacker House · Summer 2026",
+  description:
+    "Farmhouse is a Stanford hacker house where founders build together over the summer. Meet the founding members and their companies. Code the Farm.",
+  metadataBase: new URL("https://farmhaus.vercel.app"),
+  openGraph: {
+    title: "Farmhouse — Stanford Hacker House · Summer 2026",
+    description:
+      "A Stanford hacker house where founders build together over the summer. Code the Farm.",
+    type: "website",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Farmhouse — Stanford Hacker House",
+    description: "A Stanford hacker house. Code the Farm. Summer 2026.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0A0A0A",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${display.variable} ${mono.variable}`}>
+      <body>{children}</body>
+    </html>
+  );
+}
