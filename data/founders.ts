@@ -5,7 +5,7 @@ export type Logo = {
 };
 
 export type Founder = {
-  /** Display number, "01"–"07" */
+  /** Display number, "01"–"08" */
   num: string;
   name: string;
   /** Headline role, e.g. "CTO @ 0studio" — rendered in brand red */
@@ -22,10 +22,8 @@ export type Founder = {
 };
 
 /**
- * The seven founding members of Farmhouse, transcribed from the cohort deck.
+ * The eight founding members of Farmhouse, transcribed from the cohort deck.
  * Single source of truth — the Founders section maps over this array.
- * `photo` and `logo.src` are intentionally omitted until real assets are dropped
- * into /public; the UI degrades gracefully (numeral avatar, text logo chips).
  */
 export const founders: Founder[] = [
   {
@@ -40,7 +38,11 @@ export const founders: Founder[] = [
       "Inventor, SmartWalker (TreeHacks 2026): an AI rehab walker with computer-vision gait analysis, step count, and pressure sensing",
       "Built a Parkinson's classifier on a 2,105-patient cohort (KNN, 0.889 accuracy) with feature selection to improve fairness",
     ],
-    logos: [{ name: "Telomis" }, { name: "BASES" }],
+    photo: "/founders/image12.png",
+    logos: [
+      { name: "Telomis", src: "/logos/image9.png" },
+      { name: "BASES", src: "/logos/image14.png" },
+    ],
   },
   {
     num: "02",
@@ -56,7 +58,11 @@ export const founders: Founder[] = [
       "Recruited onto an Airbus tender at the European Space Agency (ESA)",
       "Competed in physics and astrophysics olympiads",
     ],
-    logos: [{ name: "Regeneron ISEF" }, { name: "Cardinal Ventures" }],
+    photo: "/founders/image5.png",
+    logos: [
+      { name: "Regeneron ISEF", src: "/logos/image16.png" },
+      { name: "Cardinal Ventures", src: "/logos/image20.png" },
+    ],
   },
   {
     num: "03",
@@ -71,7 +77,11 @@ export const founders: Founder[] = [
       "US Patent No. 11,950,613 B1 — GuacSaver Food Preservation System",
       "Inventor, SmartWalker (TreeHacks 2026): an AI-powered rehab walker",
     ],
-    logos: [{ name: "Nonlinear" }, { name: "BASES" }],
+    photo: "/founders/image17.png",
+    logos: [
+      { name: "Nonlinear", src: "/logos/image15.png" },
+      { name: "BASES", src: "/logos/image14.png" },
+    ],
   },
   {
     num: "04",
@@ -87,7 +97,11 @@ export const founders: Founder[] = [
       "ML for cancer prediction at UCLA Quantitative & Computational Biosciences",
       "TreeHacks winner, Poke Track",
     ],
-    logos: [{ name: "ASES" }, { name: "Cardinal Ventures" }],
+    photo: "/founders/image23.png",
+    logos: [
+      { name: "ASES", src: "/logos/image4.png" },
+      { name: "Cardinal Ventures", src: "/logos/image20.png" },
+    ],
   },
   {
     num: "05",
@@ -103,7 +117,12 @@ export const founders: Founder[] = [
       "Conducting research at Stanford SAFE AI Lab",
       "Youth Delegate to the United Nations",
     ],
-    logos: [{ name: "TreeHacks" }, { name: "Context" }, { name: "ASES" }],
+    photo: "/founders/image10.png",
+    logos: [
+      { name: "TreeHacks", src: "/logos/image8.png" },
+      { name: "Context", src: "/logos/image6.png" },
+      { name: "ASES", src: "/logos/image4.png" },
+    ],
   },
   {
     num: "06",
@@ -118,7 +137,12 @@ export const founders: Founder[] = [
       "First Place International DECA Champion",
       "Built an agentic social-life planner that hit 300 users within 36 hours at TreeHacks (won Poke track)",
     ],
-    logos: [{ name: "Caladan" }, { name: "MSL" }, { name: "ASES" }],
+    photo: "/founders/image24.png",
+    logos: [
+      { name: "Caladan", src: "/logos/image13.png" },
+      { name: "MSL", src: "/logos/image11.png" },
+      { name: "ASES", src: "/logos/image4.png" },
+    ],
   },
   {
     num: "07",
@@ -130,7 +154,8 @@ export const founders: Founder[] = [
       "Ex-ML Engineer @ Midas Intelligence — designed mathematical formal reasoning models",
       "Presented Machine Learning Heliophysics Research @ National NASA Conferences",
     ],
-    logos: [{ name: "BASES" }],
+    photo: "/founders/image22.jpg",
+    logos: [{ name: "BASES", src: "/logos/image14.png" }],
   },
   {
     num: "08",
@@ -145,6 +170,7 @@ export const founders: Founder[] = [
       "F1 in Schools: 13th at Worlds, 2x US National Champion",
       "3x first author on healthcare outcomes research",
     ],
-    logos: [{ name: "Y Combinator" }],
+    photo: "/founders/image21.png",
+    logos: [{ name: "Y Combinator", src: "/logos/image18.png" }],
   },
 ];
