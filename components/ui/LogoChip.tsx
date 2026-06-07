@@ -18,11 +18,11 @@ type LogoChipProps = {
  */
 export function LogoChip({ name, src }: LogoChipProps) {
   return (
-    <span className="inline-flex h-8 items-center rounded border border-terminal/25 bg-panel-light/60 px-2.5">
+    <span className="inline-flex h-8 items-center rounded-md border border-border bg-muted px-2.5">
       {src ? (
         <img src={src} alt={name} className="h-4 w-auto object-contain" />
       ) : (
-        <span className="font-mono text-xs uppercase tracking-wide text-fog-dim">
+        <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
           {name}
         </span>
       )}

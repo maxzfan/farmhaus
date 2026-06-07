@@ -1,19 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo_Black, JetBrains_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-
-const display = Archivo_Black({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Farmhouse — Stanford Hacker House · Summer 2026",
@@ -36,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A0A0A",
+  themeColor: "#0D0D0D",
 };
 
 export default function RootLayout({
@@ -45,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable}`}>
+    <html lang="en" className={cn(GeistSans.variable, GeistMono.variable, "font-sans", "bg-background")}>
       <body>{children}</body>
     </html>
   );

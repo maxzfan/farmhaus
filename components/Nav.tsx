@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const LINKS = [
   { href: "#home", label: "Home" },
@@ -9,30 +10,28 @@ const LINKS = [
 
 /**
  * Fixed top navigation. Wordmark on the left, section anchors in the center
- * (hidden on small screens where the page is a single scroll), and a persistent
- * "Suggest an Event" contact CTA on the right. Keyboard focus uses the global
- * terminal-green focus-visible ring.
+ * (hidden on small screens), and a persistent contact CTA on the right.
  */
 export function Nav() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-terminal/10 bg-ink/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <nav
         aria-label="Primary"
         className="mx-auto flex max-w-content items-center justify-between px-5 py-3.5 sm:px-8"
       >
         <Link
           href="#home"
-          className="font-display text-lg tracking-tight text-barn text-glow-red sm:text-xl"
+          className="font-display text-xl font-semibold tracking-tight text-primary sm:text-2xl"
         >
-          FARM<span className="text-fog">HOUSE</span>
+          Farm<span className="text-foreground">house</span>
         </Link>
 
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-8 md:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-mono text-sm text-fog-dim transition-colors hover:text-terminal hover:text-glow"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -40,12 +39,11 @@ export function Nav() {
           ))}
         </ul>
 
-        <a
-          href="mailto:maxfan@stanford.edu?subject=Farmhouse%20Summer%20Event%20Suggestion"
-          className="rounded border border-terminal/50 bg-terminal/10 px-3.5 py-1.5 font-mono text-xs text-terminal transition-all hover:bg-terminal/20 hover:shadow-glow-sm sm:text-sm"
-        >
-          Contact
-        </a>
+        <Button asChild variant="secondary" size="sm">
+          <a href="mailto:maxfan@stanford.edu?subject=Farmhouse%20Summer%20Event%20Suggestion">
+            Contact
+          </a>
+        </Button>
       </nav>
     </header>
   );

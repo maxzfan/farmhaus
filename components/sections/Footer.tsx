@@ -9,18 +9,18 @@ const LINKS = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-terminal/15 bg-panel/40">
+    <footer className="relative border-t border-border bg-card">
       <div className="mx-auto flex max-w-content flex-col gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between">
         <div>
           <Link
             href="#home"
-            className="font-display text-xl tracking-tight text-barn text-glow-red"
+            className="font-display text-xl font-semibold tracking-tight text-primary"
           >
-            FARM<span className="text-fog">HOUSE</span>
+            Farm<span className="text-foreground">house</span>
           </Link>
-          <p className="mt-2 font-mono text-xs text-fog-dim">
+          <p className="mt-2 text-sm text-muted-foreground">
             Stanford Hacker House · Summer 2026 ·{" "}
-            <span className="text-terminal">Code the Farm</span>
+            <span className="text-secondary">Code the Farm</span>
           </p>
         </div>
 
@@ -29,24 +29,23 @@ export function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-mono text-sm text-fog-dim transition-colors hover:text-terminal"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
           ))}
           <a
             href="mailto:maxfan@stanford.edu?subject=Farmhouse"
-            className="font-mono text-sm text-fog-dim transition-colors hover:text-terminal"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
             Contact
           </a>
         </nav>
       </div>
 
-      <div className="border-t border-terminal/10 px-5 py-4 sm:px-8">
-        <p className="mx-auto max-w-content font-mono text-xs text-fog-dim">
-          <span className="text-terminal">$</span> echo &quot;built with too much
-          coffee&quot; — © {new Date().getFullYear()} Farmhouse
+      <div className="border-t border-border/60 px-5 py-4 sm:px-8">
+        <p className="mx-auto max-w-content text-xs text-muted-foreground">
+          Built with too much coffee — © {new Date().getFullYear()} Farmhouse
         </p>
       </div>
     </footer>
