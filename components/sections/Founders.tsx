@@ -20,7 +20,7 @@ export function Founders() {
           The <span className="text-primary">Founders</span>
         </h2>
         <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          Seven builders shipping companies, research, and patents — under one
+          Eight builders shipping companies, research, and patents — under one
           roof this summer.
         </p>
       </header>

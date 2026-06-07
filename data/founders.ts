@@ -132,4 +132,19 @@ export const founders: Founder[] = [
     ],
     logos: [{ name: "BASES" }],
   },
+  {
+    num: "08",
+    name: "Raza Zaidi",
+    role: "Co-Founder @ Stratton Labs",
+    roleSuffix: " — an AI-native hedge fund backed by Y Combinator",
+    meta: ["Stanford CS + Econ"],
+    bullets: [
+      "AI Analyst at Meteora Capital ($2B AUM hedge fund)",
+      "AI/ML at Nexa Labs (YC S25), built a predictive cattle health algorithm",
+      "Researcher at Stanford Emerging Market Technology Group",
+      "F1 in Schools: 13th at Worlds, 2x US National Champion",
+      "3x first author on healthcare outcomes research",
+    ],
+    logos: [{ name: "Y Combinator" }],
+  },
 ];
