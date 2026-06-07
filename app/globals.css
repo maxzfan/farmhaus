@@ -4,104 +4,89 @@
 
 @layer base {
   :root {
-    --font-display: "Archivo Black", system-ui, sans-serif;
-    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --font-display: var(--font-geist-sans), system-ui, sans-serif;
+    --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+    /* Clean, minimal dark UI (v0-dashboard style): near-black neutral base,
+       cool gray text, hairline borders, restrained red/green accents. */
+    --background: 0 0% 4%; /* near black */
+    --foreground: 0 0% 96%; /* clean off-white */
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 351 70% 47%; /* barn red accent */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 130 48% 48%; /* farm green accent */
+    --secondary-foreground: 0 0% 6%;
+
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 60%; /* neutral gray, not warm */
+
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 92%;
+
+    --destructive: 351 74% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%; /* hairline */
+    --input: 0 0% 15%;
+    --ring: 0 0% 45%;
+
+    --radius: 0.5rem;
   }
 
   html {
     scroll-behavior: smooth;
+    @apply bg-background;
   }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
+    .animate-fade-up,
+    .animate-float {
+      animation: none !important;
+    }
   }
 
   body {
-    @apply bg-ink text-fog font-mono antialiased;
-    /* faint radial vignette so the near-black has depth */
-    background-image: radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgba(57, 255, 20, 0.05),
-      transparent 70%
-    );
+    @apply bg-background text-foreground font-sans antialiased;
   }
 
-  /* Uniform, theme-matched keyboard focus ring across all interactive elements */
+  * {
+    @apply border-border;
+  }
+
+  /* Themed keyboard focus ring */
   a:focus-visible,
   button:focus-visible,
   [tabindex]:focus-visible {
-    outline: 2px solid theme("colors.terminal.DEFAULT");
+    outline: 2px solid hsl(var(--ring));
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   ::selection {
-    background: rgba(57, 255, 20, 0.25);
-    color: #eafff0;
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
-  /* Green text glow for terminal / interactive emphasis */
-  .text-glow {
-    text-shadow: 0 0 6px rgba(57, 255, 20, 0.65), 0 0 18px rgba(57, 255, 20, 0.3);
-  }
-
-  .text-glow-red {
-    text-shadow: 0 0 10px rgba(200, 16, 46, 0.55);
-  }
-
-  /* Binary/matrix texture — pure CSS, no per-frame JS. Two tiled gradient
-     layers fake falling code columns; opacity kept low so it reads as texture. */
-  .matrix-bg {
-    background-color: theme("colors.ink");
-    background-image: repeating-linear-gradient(
-        90deg,
-        rgba(57, 255, 20, 0.05) 0px,
-        rgba(57, 255, 20, 0.05) 1px,
-        transparent 1px,
-        transparent 22px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        rgba(57, 255, 20, 0.04) 0px,
-        rgba(57, 255, 20, 0.04) 1px,
-        transparent 1px,
-        transparent 22px
-      );
-  }
-
-  /* Subtle CRT scanline overlay — apply to a pointer-events-none layer */
-  .scanlines::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.18) 0px,
-      rgba(0, 0, 0, 0.18) 1px,
-      transparent 1px,
-      transparent 3px
+  /* Very faint neutral dot grid on the near-black background. */
+  .paper-bg {
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(
+      hsl(0 0% 100% / 0.025) 1px,
+      transparent 1px
     );
-    mix-blend-mode: multiply;
-  }
-
-  /* Blinking terminal cursor; freezes to a static block under reduced-motion */
-  .cursor-blink {
-    @apply inline-block w-[0.6em] h-[1.05em] translate-y-[0.12em] bg-terminal;
-    animation: blink 1.1s step-end infinite;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .cursor-blink {
-      animation: none;
-      opacity: 1;
-    }
-    .animate-fade-up {
-      animation: none !important;
-    }
+    background-size: 26px 26px;
   }
 }

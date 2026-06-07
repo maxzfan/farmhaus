@@ -13,15 +13,15 @@ export function Founders() {
       className="relative mx-auto max-w-content scroll-mt-20 px-5 py-24 sm:px-8"
     >
       <header className="mb-12">
-        <p className="font-mono text-sm text-terminal text-glow">
-          <span className="text-fog-dim">$</span> cat founders/*.json
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">
+          Meet the cohort
         </p>
-        <h2 className="mt-3 font-display text-3xl text-fog sm:text-4xl">
-          The <span className="text-barn text-glow-red">Founders</span>
+        <h2 className="mt-3 font-display text-3xl font-semibold text-foreground sm:text-4xl">
+          The <span className="text-primary">Founders</span>
         </h2>
-        <p className="mt-3 max-w-2xl font-mono text-sm text-fog-dim sm:text-base">
-          Seven builders shipping companies, research, and patents — under one roof
-          this summer.
+        <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
+          Seven builders shipping companies, research, and patents — under one
+          roof this summer.
         </p>
       </header>
 
