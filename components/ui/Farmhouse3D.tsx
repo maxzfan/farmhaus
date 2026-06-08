@@ -25,8 +25,8 @@ function Barn() {
   const group = useRef<Group>(null);
   // animation progress 0 -> 1 for the rightward slide-in
   const t = useRef(0);
-  // hold at the start position until the visitor enters through the gate
-  const started = useRef(false);
+  // start the slide-in as soon as the scene mounts
+  const started = useRef(true);
 
   useEffect(() => {
     const onEnter = () => {

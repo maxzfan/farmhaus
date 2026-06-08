@@ -32,7 +32,7 @@ export function Hero() {
           </p>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            A red barn full of founders. Seven builders live, ship, and break
+            A red barn full of founders. Eight builders live, ship, and break
             things together all summer — companies, research, patents, and the
             occasional 36-hour hackathon sprint.
           </p>
