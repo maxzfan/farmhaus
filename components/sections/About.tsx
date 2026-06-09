@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
  */
 const STATS: { value: string; label: string }[] = [
   { value: String(founders.length), label: "Founders" },
-  { value: "7", label: "Companies" }, // TODO: keep in sync with the cohort
+  { value: "8", label: "Companies" }, // TODO: keep in sync with the cohort
   { value: "2", label: "US Patents" },
   { value: "3x", label: "TreeHacks wins" },
 ];
@@ -29,7 +29,7 @@ export function About() {
           <div className="mt-5 flex flex-col gap-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
               Farmhouse is a Stanford hacker house — a red barn in the Valley
-              where founders build together over the summer. One roof, seven
+              where founders build together over the summer. One roof, eight
               builders, and a shared bet that the best way to ship is side by
               side.
             </p>
