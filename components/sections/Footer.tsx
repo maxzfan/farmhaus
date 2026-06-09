@@ -9,14 +9,14 @@ const LINKS = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border bg-card">
+    <footer className="relative border-t border-border bg-background/30 backdrop-blur-md">
       <div className="mx-auto flex max-w-content flex-col gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between">
         <div>
           <Link
             href="#home"
-            className="font-display text-xl font-semibold tracking-tight text-primary"
+            className="font-display text-xl font-semibold tracking-tight"
           >
-            Farm<span className="text-foreground">house</span>
+            <span className="text-metallic-red">Farm</span><span className="text-metallic-silver">house</span>
           </Link>
           <p className="mt-2 text-sm text-muted-foreground">
             Stanford Hacker House · Summer 2026 ·{" "}

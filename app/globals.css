@@ -80,6 +80,34 @@
 }
 
 @layer components {
+  .text-metallic-red {
+    background: linear-gradient(
+      180deg,
+      #7a1515 0%,
+      #c0392b 25%,
+      #e85c5c 45%,
+      #c0392b 65%,
+      #8b1a1a 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-metallic-silver {
+    background: linear-gradient(
+      180deg,
+      #c0c0c0 0%,
+      #f5f5f5 30%,
+      #ffffff 50%,
+      #a8a8a8 75%,
+      #d8d8d8 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   /* Very faint neutral dot grid on the near-black background. */
   .paper-bg {
     background-color: hsl(var(--background));

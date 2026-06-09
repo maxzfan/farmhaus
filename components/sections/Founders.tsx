@@ -3,8 +3,10 @@ import { FounderCard } from "@/components/ui/FounderCard";
 
 /**
  * Founders section. Renders one FounderCard per entry in `data/founders.ts`.
- * Cards stack in a single column — they're wide (photo + text), so a single
- * column reads cleanly and sidesteps the orphaned-card problem of a 7-item grid.
+ * Cards stack in a single column on small screens and form a 2-column grid
+ * (2×4 for the eight founders) once there's room. Each card is a compact,
+ * collapsible "Learn more" toggle, so `items-start` keeps an expanded card from
+ * stretching its row neighbor.
  */
 export function Founders() {
   return (
@@ -25,7 +27,7 @@ export function Founders() {
         </p>
       </header>
 
-      <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2">
         {founders.map((founder) => (
           <FounderCard key={founder.num} founder={founder} />
         ))}

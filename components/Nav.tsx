@@ -21,9 +21,9 @@ export function Nav() {
       >
         <Link
           href="#home"
-          className="font-display text-xl font-semibold tracking-tight text-primary sm:text-2xl"
+          className="font-display text-xl font-semibold tracking-tight sm:text-2xl"
         >
-          Farm<span className="text-foreground">house</span>
+          <span className="text-metallic-red">Farm</span><span className="text-metallic-silver">house</span>
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

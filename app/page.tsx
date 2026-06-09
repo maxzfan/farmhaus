@@ -4,10 +4,12 @@ import { About } from "@/components/sections/About";
 import { Founders } from "@/components/sections/Founders";
 import { Events } from "@/components/sections/Events";
 import { Footer } from "@/components/sections/Footer";
+import { GradientBackground } from "@/components/ui/GradientBackground";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative overflow-hidden">
+      <GradientBackground />
       <Nav />
       <main>
         <Hero />
@@ -16,6 +18,6 @@ export default function Home() {
         <Events />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

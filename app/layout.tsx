@@ -5,7 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Farmhouse — Stanford Hacker House · Summer 2026",
+  title: "farmhouse",
   description:
     "Farmhouse is a Stanford hacker house where founders build together over the summer. Meet the founding members and their companies. Code the Farm.",
   metadataBase: new URL("https://farmhaus.vercel.app"),

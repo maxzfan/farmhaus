@@ -146,19 +146,6 @@ export const founders: Founder[] = [
   },
   {
     num: "07",
-    name: "Nathaniel Laurent",
-    role: "ML Research Engineer @ Phinity Labs",
-    roleSuffix: " — building AI systems automating chip design workflows",
-    meta: ["Stanford Physics & CS (AI Track)", "VP of Technical Cohort, Stanford BASES"],
-    bullets: [
-      "Ex-ML Engineer @ Midas Intelligence — designed mathematical formal reasoning models",
-      "Presented Machine Learning Heliophysics Research @ National NASA Conferences",
-    ],
-    photo: "/founders/image22.jpg",
-    logos: [{ name: "BASES", src: "/logos/image14.png" }],
-  },
-  {
-    num: "08",
     name: "Raza Zaidi",
     role: "Co-Founder @ Stratton Labs",
     roleSuffix: " — an AI-native hedge fund backed by Y Combinator",
@@ -172,5 +159,18 @@ export const founders: Founder[] = [
     ],
     photo: "/founders/image21.png",
     logos: [{ name: "Y Combinator", src: "/logos/image18.png" }],
+  },
+  {
+    num: "08",
+    name: "Nathaniel Laurent",
+    role: "ML Research Engineer @ Phinity Labs",
+    roleSuffix: " — building AI systems automating chip design workflows",
+    meta: ["Stanford Physics & CS (AI Track)", "VP of Technical Cohort, Stanford BASES"],
+    bullets: [
+      "Ex-ML Engineer @ Midas Intelligence — designed mathematical formal reasoning models",
+      "Presented Machine Learning Heliophysics Research @ National NASA Conferences",
+    ],
+    photo: "/founders/image22.jpg",
+    logos: [{ name: "BASES", src: "/logos/image14.png" }],
   },
 ];

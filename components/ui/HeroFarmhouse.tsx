@@ -20,12 +20,10 @@ const Farmhouse3D = dynamic(
 
 export function HeroFarmhouse() {
   return (
-    <div className="relative h-[42vh] w-full lg:h-[68vh]">
-      {/* warm glow halo behind the scene */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 mx-auto my-auto h-2/3 w-2/3 rounded-full bg-primary/10 blur-3xl"
-      />
+    // Full-bleed and anchored to the bottom of the hero. The extra height +
+    // negative bottom offset push the barn's base below the fold so it reads as
+    // rising, cropped, out of the bottom edge of the screen.
+    <div className="pointer-events-none absolute inset-x-0 -bottom-[12vh] h-[62vh]">
       <Farmhouse3D />
     </div>
   );
