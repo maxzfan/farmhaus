@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 const SUGGEST_MAILTO =
   "mailto:maxfan@stanford.edu?subject=Farmhouse%20Summer%20Event%20Suggestion&body=Here's%20an%20event%20Farmhouse%20should%20run%20this%20summer%3A%0A%0A";
 
-const EVENTS = [
+type Event = { date: string; day: string; title: string; description: string; flagship?: boolean };
+
+const EVENTS: Event[] = [
   {
     date: "JUN 12",
     day: "FRI",
